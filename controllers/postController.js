@@ -10,7 +10,7 @@ exports.index = function(req, res, next) {
   Post.find({}).exec(function (err, list_posts) {
     if (err) { return next(err); }
     // Successful, so render
-    res.render('posts', { title: 'Post List', post_list: list_posts});
+    res.render('posts', { title: 'TIC-TAC-TOE', post_list: list_posts});
   });
 
 };
@@ -29,6 +29,6 @@ exports.create = function(req, res, next) {
     post.save(function (err) {
       if (err) { return next(err); }
       // Successful - redirect to new book record.
-      res.redirect('/posts');
+      res.redirect('/');
     });
   };
