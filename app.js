@@ -7,7 +7,7 @@ var Promise = require("bluebird");
 
 // Define routers
 var indexRouter = require('./routes/index');
-var postsRouter = require('./routes/posts');
+
 
 var app = express();
 
@@ -76,7 +76,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Use the routes
 app.use('/', indexRouter);
-app.use('/posts', postsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
